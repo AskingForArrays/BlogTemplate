@@ -1,0 +1,15 @@
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\bin\Debug\netcoreapp3.1\BlogTemplate.BLL.deps.json
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\bin\Debug\netcoreapp3.1\BlogTemplate.BLL.dll
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\bin\Debug\netcoreapp3.1\BlogTemplate.BLL.pdb
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\bin\Debug\netcoreapp3.1\BlogTemplate.Data.dll
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\bin\Debug\netcoreapp3.1\BlogTemplate.Domain.dll
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\bin\Debug\netcoreapp3.1\BlogTemplate.Data.pdb
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\bin\Debug\netcoreapp3.1\BlogTemplate.Domain.pdb
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\obj\Debug\netcoreapp3.1\BlogTemplate.BLL.csproj.AssemblyReference.cache
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\obj\Debug\netcoreapp3.1\BlogTemplate.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\obj\Debug\netcoreapp3.1\BlogTemplate.BLL.AssemblyInfoInputs.cache
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\obj\Debug\netcoreapp3.1\BlogTemplate.BLL.AssemblyInfo.cs
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\obj\Debug\netcoreapp3.1\BlogTemplate.BLL.csproj.CoreCompileInputs.cache
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\obj\Debug\netcoreapp3.1\BlogTemplate.BLL.csproj.CopyComplete
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\obj\Debug\netcoreapp3.1\BlogTemplate.BLL.dll
+C:\GitHub\BlogTemplate\BlogTemplate.BLL\obj\Debug\netcoreapp3.1\BlogTemplate.BLL.pdb

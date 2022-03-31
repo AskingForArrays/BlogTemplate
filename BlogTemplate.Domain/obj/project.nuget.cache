@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "boihYGcS7Yt+xZVinExWZuJr2jopBhIwkINI0Pn4G3bNzXIigiYZ4ZI6de5gVGHMrQpSLjpI1KH11l/Gk59ljg==",
+  "success": true,
+  "projectFilePath": "C:\\GitHub\\BlogTemplate\\BlogTemplate.Domain\\BlogTemplate.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tim\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Tim\\.nuget\\packages\\system.memory.data\\6.0.0\\system.memory.data.6.0.0.nupkg.sha512",
+    "C:\\Users\\Tim\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Tim\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\Tim\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
