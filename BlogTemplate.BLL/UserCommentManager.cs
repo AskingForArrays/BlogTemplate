@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlogTemplate.BLL
 {
-    class UserCommentManager
+    public class UserCommentManager
     {
     }
 }
