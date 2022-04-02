@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uiYf6jLjT2Z2DalqMcwTylX9ZCL80NSGk/DK11wnApr1bK/2v8rkcz8xgQ/N3ASwxBAmrl9hemhOHjZoti42Zg==",
+  "dgSpecHash": "RyxzOqjIgMmfc1kGRTMSM9UdimIDIdR2KfUWZaqWVoccI1dK/Jy8mL4OINhCSc54xJHMkEXKUYAQ15fI1/2MqA==",
   "success": true,
-  "projectFilePath": "C:\\GitHub\\BlogTemplate\\BlogTemplate.Domain\\BlogTemplate.Domain.csproj",
+  "projectFilePath": "D:\\GitHub\\BlogTemplate\\BlogTemplate.Domain\\BlogTemplate.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

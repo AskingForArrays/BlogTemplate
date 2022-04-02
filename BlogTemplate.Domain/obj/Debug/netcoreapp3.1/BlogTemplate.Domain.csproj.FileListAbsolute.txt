@@ -8,3 +8,13 @@ C:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.
 C:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.Domain.csproj.CoreCompileInputs.cache
 C:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.Domain.dll
 C:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.Domain.pdb
+D:\GitHub\BlogTemplate\BlogTemplate.Domain\bin\Debug\netcoreapp3.1\BlogTemplate.Domain.deps.json
+D:\GitHub\BlogTemplate\BlogTemplate.Domain\bin\Debug\netcoreapp3.1\BlogTemplate.Domain.dll
+D:\GitHub\BlogTemplate\BlogTemplate.Domain\bin\Debug\netcoreapp3.1\BlogTemplate.Domain.pdb
+D:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.Domain.csproj.AssemblyReference.cache
+D:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.Domain.AssemblyInfoInputs.cache
+D:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.Domain.AssemblyInfo.cs
+D:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.Domain.csproj.CoreCompileInputs.cache
+D:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.Domain.dll
+D:\GitHub\BlogTemplate\BlogTemplate.Domain\obj\Debug\netcoreapp3.1\BlogTemplate.Domain.pdb

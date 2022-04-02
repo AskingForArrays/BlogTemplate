@@ -8,19 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Tim\\.nuget\\packages\\": {}
+    "C:\\Users\\kraus\\.nuget\\packages\\": {},
+    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\BlogTemplate\\BlogTemplate.Domain\\BlogTemplate.Domain.csproj",
+      "projectUniqueName": "D:\\GitHub\\BlogTemplate\\BlogTemplate.Domain\\BlogTemplate.Domain.csproj",
       "projectName": "BlogTemplate.Domain",
-      "projectPath": "C:\\GitHub\\BlogTemplate\\BlogTemplate.Domain\\BlogTemplate.Domain.csproj",
-      "packagesPath": "C:\\Users\\Tim\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\BlogTemplate\\BlogTemplate.Domain\\obj\\",
+      "projectPath": "D:\\GitHub\\BlogTemplate\\BlogTemplate.Domain\\BlogTemplate.Domain.csproj",
+      "packagesPath": "C:\\Users\\kraus\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\BlogTemplate\\BlogTemplate.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Tim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kraus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
