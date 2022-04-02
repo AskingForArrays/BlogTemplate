@@ -8,7 +8,7 @@ namespace BlogTemplate.BLL
 {
     public class BlogManager
     {
-        public static List<Blog> GetAll()
+        public static IEnumerable<Blog> GetAll()
         {
             var db = new BlogContext();
             var bl = db.Blogs.ToList();

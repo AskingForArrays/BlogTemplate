@@ -9,19 +9,19 @@ namespace BlogTemplate.App.Controllers
     public class BlogController : Controller
     {
         // GET: BlogController
-        public ActionResult Index()
+        public IActionResult Index()
         {
             var blogs = BlogManager.GetAll();
-            //var blogModel = blogs.Select(b => new BlogModel
-            //{
-            //    BlogID = b.BlogID,
-            //    Title = b.Title,
-            //    Date = b.Date,
-            //    UserID = b.UserID,
-            //    Content = b.Content,
-            //    Url = b.Url
-            //}).ToList();
-            return View();
+            var blogModel = blogs.Select(b => new BlogViewModel
+            {
+                BlogID = b.BlogID,
+                Title = b.Title,
+                Date = b.Date.ToString(),
+                UserID = b.UserID.ToString(),
+                Content = b.Content,
+                Url = b.Url
+            }).ToList();
+            return View(blogModel);
         }
 
         // GET: BlogController/Details/5

@@ -2,12 +2,12 @@
 
 namespace BlogTemplate.App.Models
 {
-    public class BlogModel
+    public class BlogViewModel
     {
         public int BlogID { get; set; }
         public string Title { get; set; }
-        public DateTime Date { get; set; }
-        public int UserID { get; set; }
+        public string Date { get; set; }
+        public string UserID { get; set; }
         public string Content { get; set; }
         public string Url { get; set; }
     }

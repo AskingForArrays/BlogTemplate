@@ -2254,7 +2254,8 @@
       "BlogTemplate.BLL/1.0.0": {
         "dependencies": {
           "BlogTemplate.Data": "1.0.0",
-          "BlogTemplate.Domain": "1.0.0"
+          "BlogTemplate.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.23"
         },
         "runtime": {
           "BlogTemplate.BLL.dll": {}
