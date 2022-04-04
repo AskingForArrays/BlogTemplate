@@ -16,12 +16,17 @@ namespace BlogTemplate.Domain
         [Required]
         public DateTime Date { get; set; }
         [Required]
-        public string Content { get; set; }
+        public string Content { get; set; };
         public int UserID { get; set; }
         public User User { get; set; }
         [Required]
-        public string Url { get; set; }
-
+        public string Url { get; set; } = "";
+        [Required]
+        public string Summary { get; set; } = "";
+        [Required]
+        public bool Published { get; set; } = false;
+        [Required]
+        public byte[] MainImage { get; set; };
 
         public ICollection<UserComment> UserComments { get; set; }
     }
