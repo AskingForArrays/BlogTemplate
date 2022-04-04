@@ -160,3 +160,7 @@ C:\GitHub\BlogTemplate\BlogTemplate.App\obj\Debug\netcoreapp3.1\BlogTemplate.App
 C:\GitHub\BlogTemplate\BlogTemplate.App\obj\Debug\netcoreapp3.1\BlogTemplate.App.genruntimeconfig.cache
 C:\GitHub\BlogTemplate\BlogTemplate.App\obj\Debug\netcoreapp3.1\Razor\Views\Users\AccessDenied.cshtml.g.cs
 C:\GitHub\BlogTemplate\BlogTemplate.App\obj\Debug\netcoreapp3.1\Razor\Views\Users\Login.cshtml.g.cs
+C:\GitHub\BlogTemplate\BlogTemplate.App\obj\Debug\netcoreapp3.1\Razor\Views\Users\Details.cshtml.g.cs
+C:\GitHub\BlogTemplate\BlogTemplate.App\obj\Debug\netcoreapp3.1\Razor\Views\Users\Create.cshtml.g.cs
+C:\GitHub\BlogTemplate\BlogTemplate.App\obj\Debug\netcoreapp3.1\Razor\Views\Users\Edit.cshtml.g.cs
+C:\GitHub\BlogTemplate\BlogTemplate.App\obj\Debug\netcoreapp3.1\Razor\Views\Users\Delete.cshtml.g.cs

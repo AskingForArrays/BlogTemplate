@@ -26,7 +26,7 @@ namespace BlogTemplate.App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).
-                AddCookie(opt => opt.LoginPath = "/User/Login");
+                AddCookie(opt => opt.LoginPath = "/Users/Login");
             services.AddControllersWithViews();
         }
 
@@ -47,7 +47,7 @@ namespace BlogTemplate.App
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

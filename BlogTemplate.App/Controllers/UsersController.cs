@@ -23,23 +23,21 @@ namespace BlogTemplate.App.Controllers
         [HttpPost]
         public IActionResult Login(User user)
         {
-            //authenticate using the manager
             var usr = UserManager.Authenticate(user.Username, user.Password);
-            //return now if the user object returned is null
+
             if (user == null) return View();
-            //otherwise set up claims - one for each fact about the user
+
             var claims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Name, usr.Username),
+                new Claim("UserID", usr.UserID.ToString()),
                 new Claim("FirstName", usr.FirstName),
                 new Claim(ClaimTypes.Role, usr.AccessLevel.ToString())
             };
 
-            //create the instance of ClaimsIdentitity (holds the claims)
             var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
             HttpContext.SignInAsync("Cookies", new ClaimsPrincipal(claimsIdentity));
 
-            //handle the return url value from TempData if it exists or not
             if (TempData["ReturnUrl"] == null)
                 return RedirectToAction("Index", "Home");
             else
@@ -64,10 +62,11 @@ namespace BlogTemplate.App.Controllers
             return View();
         }
 
-        // GET: UsersController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details()
         {
-            return View();
+            var userToCheck = User.Claims.FirstOrDefault(u => u.Type.Equals("UserID", StringComparison.OrdinalIgnoreCase)).Value.ToString();
+            var userToView = UserManager.GetUserById(Convert.ToInt32(userToCheck));
+            return View(userToView);
         }
 
         // GET: UsersController/Create
@@ -79,32 +78,48 @@ namespace BlogTemplate.App.Controllers
         // POST: UsersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(User user)
         {
-            try
+
+            if (!UserManager.CheckUsername(user.Username))
             {
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    user.AccessLevel = 2;
+                    UserManager.Add(user);
+                    return RedirectToAction("Index","Home");
+                }
+                catch
+                {
+                    return View();
+                }
             }
-            catch
+            else
             {
+                ViewBag.Message = "UserName already exists.";
                 return View();
             }
+
         }
 
         // GET: UsersController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+
+            var userToCheck = User.Claims.FirstOrDefault(u => u.Type.Equals("UserID", StringComparison.OrdinalIgnoreCase)).Value.ToString();
+            var userToView = UserManager.GetUserById(Convert.ToInt32(userToCheck));
+            return View(userToView);
         }
 
         // POST: UsersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(User user)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                UserManager.Update(user);
+                return RedirectToAction("Details");
             }
             catch
             {
@@ -115,17 +130,20 @@ namespace BlogTemplate.App.Controllers
         // GET: UsersController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var userToCheck = User.Claims.FirstOrDefault(u => u.Type.Equals("UserID", StringComparison.OrdinalIgnoreCase)).Value.ToString();
+            var userToView = UserManager.GetUserById(Convert.ToInt32(userToCheck));
+            return View(userToView);
         }
 
         // POST: UsersController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(User user)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                UserManager.Delete(user);
+                return RedirectToAction("Index", "Home");
             }
             catch
             {

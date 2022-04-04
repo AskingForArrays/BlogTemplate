@@ -35,6 +35,36 @@ namespace BlogTemplate.BLL
             }
         }
 
+        public static void Update(User userToUpdate)
+        {
+            try
+            {
+                var db = new BlogContext();
+                var oldUser = db.Users.Find(userToUpdate.UserID);
+                oldUser.FirstName = userToUpdate.FirstName;
+                oldUser.LastName = userToUpdate.LastName;
+                db.SaveChanges();
+            }
+            catch
+            {
+
+            }
+        }
+
+        public static void Delete(User userToUpdate)
+        {
+            try
+            {
+                var db = new BlogContext();
+                db.Users.Remove(userToUpdate);
+                db.SaveChanges();
+            }
+            catch
+            {
+
+            }
+        }
+
         /// <summary>
         /// User is authenticated based on credentials and a user returned if exists or null if not.
         /// </summary>
@@ -43,10 +73,37 @@ namespace BlogTemplate.BLL
         /// <returns>A user object or null.</returns>
         public static User Authenticate(string username, string password)
         {
-            var context = new BlogContext();
-            var user = context.Users.SingleOrDefault(usr => usr.Username == username
-                                                    && usr.Password == password);
-            return user; //this will either be null or an object
+            var db = new BlogContext();
+            var userReturn = db.Users.SingleOrDefault(user => user.Username == username
+                                                    && user.Password == password);
+            return userReturn; //this will either be null or an object
         }
+
+        public static User GetUserById(int userId)
+        {
+            var db = new BlogContext();
+            var userReturn = db.Users.SingleOrDefault(u => u.UserID == userId);
+            return userReturn;
+        }
+
+        /// <summary>
+        /// Checks if a username already exists in the database and returns true if it already exists
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>bool - true if it exists</returns>
+        public static bool CheckUsername(string username)
+        {
+            var db = new BlogContext();
+            var userReturn = db.Users.SingleOrDefault(u => u.Username == username);
+            if (userReturn != null)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+
+        }
+
     }
 }
