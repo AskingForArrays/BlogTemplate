@@ -2,6 +2,8 @@
 using BlogTemplate.BLL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 
 namespace BlogTemplate.App.Controllers
@@ -12,16 +14,18 @@ namespace BlogTemplate.App.Controllers
         public IActionResult Index()
         {
             var blogs = BlogManager.GetAll();
-            var blogModel = blogs.Select(b => new BlogViewModel
+            var blogViewModel = blogs.Select(b => new BlogViewModel
             {
                 BlogID = b.BlogID,
                 Title = b.Title,
                 Date = b.Date.ToString(),
                 UserID = b.UserID.ToString(),
                 Content = b.Content,
-                Url = b.Url
+                Url = b.Url,
+                MainImage = ConvertToImage(b.MainImage),
+                Published = b.Published
             }).ToList();
-            return View(blogModel);
+            return View(blogViewModel);
         }
 
         // GET: BlogController/Details/5
@@ -91,6 +95,14 @@ namespace BlogTemplate.App.Controllers
             {
                 return View();
             }
+        }
+
+        public static Image ConvertToImage(byte[] imageBytes)
+        {
+            MemoryStream ms = new MemoryStream(imageBytes);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+
         }
     }
 }

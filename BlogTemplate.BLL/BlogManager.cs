@@ -2,6 +2,8 @@
 using BlogTemplate.Domain;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 
 namespace BlogTemplate.BLL
@@ -37,5 +39,7 @@ namespace BlogTemplate.BLL
         //    var blog = db.Blogs.Find(id);
         //    return blog;
         //}
+
+
     }
 }
