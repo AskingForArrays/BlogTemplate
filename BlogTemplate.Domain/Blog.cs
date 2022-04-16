@@ -16,7 +16,7 @@ namespace BlogTemplate.Domain
         [Required]
         public DateTime Date { get; set; }
         [Required]
-        public string Content { get; set; };
+        public string Content { get; set; }
         public int UserID { get; set; }
         public User User { get; set; }
         [Required]
@@ -26,7 +26,7 @@ namespace BlogTemplate.Domain
         [Required]
         public bool Published { get; set; } = false;
         [Required]
-        public byte[] MainImage { get; set; };
+        public string HeadImage { get; set; }
 
         public ICollection<UserComment> UserComments { get; set; }
     }

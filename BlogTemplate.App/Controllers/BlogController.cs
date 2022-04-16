@@ -1,7 +1,11 @@
 ﻿using BlogTemplate.App.Models;
 using BlogTemplate.BLL;
+using BlogTemplate.Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.IO;
 using System.Linq;
 
 namespace BlogTemplate.App.Controllers
@@ -19,15 +23,20 @@ namespace BlogTemplate.App.Controllers
                 Date = b.Date.ToString(),
                 UserID = b.UserID.ToString(),
                 Content = b.Content,
-                Url = b.Url
+                Url = b.Url,
+                Summary = b.Summary,
+                HeadImage = b.HeadImage,
             }).ToList();
+
             return View(blogModel);
         }
+
 
         // GET: BlogController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var blog = BlogManager.Find(id);
+            return View(blog);
         }
 
         // GET: BlogController/Create
@@ -51,19 +60,32 @@ namespace BlogTemplate.App.Controllers
             }
         }
 
+
+        [Authorize(Roles = "1")]
         // GET: BlogController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var blog = BlogManager.Find(id);
+            return View(blog);
         }
 
+        [Authorize(Roles = "1")]
         // POST: BlogController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Blog updatedBlog)
         {
             try
             {
+                /*              var originalBlog = BlogManager.Find(id);
+                                originalBlog.Title = incomingChanges.Title;
+                                originalBlog.Date = incomingChanges.Date.ToString();
+                                originalBlog.Content = incomingChanges.Content;
+                                originalBlog.Url = incomingChanges.Url;
+                                originalBlog.Summary = incomingChanges.Summary;*/
+                /*HeadImage = collection.HeadImage,*/
+                BlogManager.update(updatedBlog);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -72,19 +94,26 @@ namespace BlogTemplate.App.Controllers
             }
         }
 
+
+        [Authorize(Roles = "1")]
         // GET: BlogController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var blog = BlogManager.Find(id);
+            return View(blog);
         }
 
+
+        [Authorize(Roles = "1")]
         // POST: BlogController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(Blog blog)
         {
+
             try
             {
+                BlogManager.Delete(blog);
                 return RedirectToAction(nameof(Index));
             }
             catch

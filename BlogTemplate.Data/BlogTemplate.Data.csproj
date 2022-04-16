@@ -24,8 +24,4 @@
     <ProjectReference Include="..\BlogTemplate.Domain\BlogTemplate.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

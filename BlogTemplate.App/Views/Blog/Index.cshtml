@@ -22,10 +22,16 @@
                 @Html.DisplayNameFor(model => model.Content)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.UserID)
+                @Html.DisplayNameFor(model => model.Url)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Url)
+                @Html.DisplayNameFor(model => model.Summary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Published)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeadImage)
             </th>
             <th></th>
         </tr>
@@ -43,13 +49,20 @@
                 @Html.DisplayFor(modelItem => item.Content)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UserID)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Url)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.BlogID">Edit</a> |
+                @Html.DisplayFor(modelItem => item.Summary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Published)
+            </td>
+            <td>
+                <img src="../images/@item.HeadImage" alt="image" width="300"/>
+            </td>
+            <td>
+
+                <a asp-action="Edit" asp-route-id="@item.BlogID">Edit</a>
                 <a asp-action="Details" asp-route-id="@item.BlogID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.BlogID">Delete</a>
             </td>
