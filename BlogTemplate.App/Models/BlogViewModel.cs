@@ -11,7 +11,7 @@ namespace BlogTemplate.App.Models
         public string UserID { get; set; }
         public string Content { get; set; }
         public string Url { get; set; }
-        public Image MainImage { get; set; }
+        public string HeadImage { get; set; }
         public bool Published { get; set; }
         public string Summary { get; set; }
 

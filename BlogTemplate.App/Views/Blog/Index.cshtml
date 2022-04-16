@@ -31,7 +31,7 @@
                 @Html.DisplayNameFor(model => model.Published)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MainImage)
+                @Html.DisplayNameFor(model => model.HeadImage)
             </th>
             <th></th>
         </tr>
@@ -58,10 +58,11 @@
                 @Html.DisplayFor(modelItem => item.Published)
             </td>
             <td>
-                <img>@Html.DisplayFor(modelItem => item.MainImage)
+                <img src="../images/@item.HeadImage" alt="image" width="300"/>
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.BlogID">Edit</a> |
+
+                <a asp-action="Edit" asp-route-id="@item.BlogID">Edit</a>
                 <a asp-action="Details" asp-route-id="@item.BlogID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.BlogID">Delete</a>
             </td>

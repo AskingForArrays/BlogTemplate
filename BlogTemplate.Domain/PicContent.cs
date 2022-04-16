@@ -10,6 +10,6 @@ namespace BlogTemplate.Domain
 
         public int PicContentID { get; set; }
         [Required]
-        public byte[] Picture { get; set; }
+        public string Picture { get; set; }
     }
 }

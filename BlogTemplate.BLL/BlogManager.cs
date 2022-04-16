@@ -2,8 +2,6 @@
 using BlogTemplate.Domain;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
 using System.Linq;
 
 namespace BlogTemplate.BLL
@@ -24,22 +22,37 @@ namespace BlogTemplate.BLL
         //    db.SaveChanges();
         //}
 
-        //public static void update(Blog blog)
-        //{
-        //    var db = new BlogContext();
-        //    var origBlog = db.Blogs.Find(blog.BlogID);
-        //    origBlog.Title = blog.Title;
-        //    origBlog.Date = blog.Date;
-        //    db.SaveChanges();
-        //}
+        public static void update(Blog blog)
+        {
+            var db = new BlogContext();
+            var origBlog = db.Blogs.Find(blog.BlogID);
+            origBlog.Title = blog.Title;
+            origBlog.Date = blog.Date;
+            origBlog.Content = blog.Content;
+            origBlog.Summary = blog.Summary;
+            origBlog.HeadImage = blog.HeadImage;
+            db.SaveChanges();
+        }
 
-        //public static Blog Find(int id)
-        //{
-        //    var db = new BlogContext();
-        //    var blog = db.Blogs.Find(id);
-        //    return blog;
-        //}
+        public static Blog Find(int id)
+        {
+            var db = new BlogContext();
+            var blog = db.Blogs.Find(id);
+            return blog;
+        }
 
+        public static void Delete(Blog blog)
+        {
+            try
+            {
+                var db = new BlogContext();
+                db.Blogs.Remove(blog);
+                db.SaveChanges();
+            }
+            catch
+            {
 
+            }
+        }
     }
 }

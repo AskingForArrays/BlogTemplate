@@ -26,7 +26,7 @@ namespace BlogTemplate.Domain
         [Required]
         public bool Published { get; set; } = false;
         [Required]
-        public byte[] MainImage { get; set; }
+        public string HeadImage { get; set; }
 
         public ICollection<UserComment> UserComments { get; set; }
     }
